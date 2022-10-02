@@ -73,7 +73,8 @@
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#sideBarMain {
-  transition: margin-left .5s;
+#sideNavMain {
+  transition: margin-left 10s;
   padding: 20px;
+  display: flex;
 }

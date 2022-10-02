@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <script src="sideNav.js"> </script>
+        <link href="navbar.css" rel="stylesheet">
         <title>Under-grad Resources</title>
         <!-- Logo Header-->
 		<img src="images/augsburg_university_logo_big.jpg" alt="Augsburg University Logo" width="261.79" height="100">
@@ -23,26 +23,31 @@
                 <a class="nav-item nav-link" href="index.html">Home</a>
                 <a class="nav-item nav-link" href="academic_advising.html">Academic Advising</a>
                 <a class="nav-item nav-link" href="post-grad.html">Post-grad</a>
-                <a class="nav-item nav-link active" href="under-grad.html">Under-grad<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="under-grad.html">Under-grad<span class="sr-only"></span></a>
               </div>
             </div>
         </nav>
         <!-- End of navigation bar -->
         
+        <h3 style="padding: 25px;">Welcome to the Undergraduate Page!</h3>
+        
 		<!-- Use any element to open the sidenav -->
-		<span onclick="openNav()">open</span>
+		<span onclick="openNav()" style="padding-left: 5px">Open</span>
 		
 		<!-- Code for Side navigation bar -->
 		<script>
 			/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 			function openNav() {
 				var navBarElement = document.getElementById("sideNavBar");
- 	 			navBarElement.style.width = "250px";
+ 	 			navBarElement.style.width = "100px";
  	 			navBarElement.style.height = "150px";
  	 			navBarElement.style.backgroundColor = "rgba(0,0,0,0.4)";
   				document.getElementById("sideNavMain").style.marginLeft = "5px";
-  				navBarElement.innerHTML = "<a href=\"javascript:void(0)\" class=\"closebtn\" onclick=\"closeNav()\">&times;</a><br/>\
-        		<a href=\"#\">About</a> <br/>\ <a href=\"#\">Services</a> <br/>\ <a href=\"#\">Clients</a> <br/>\ <a href=\"contact.html\">Contact</a> <br/>";
+  				navBarElement.innerHTML = "<a href=\"javascript:void(0)\" class=\"closebtn\" onclick=\"closeNav()\" style=\"text-align:right;\">Close</a><br/>\
+        								   <a href=\"javascript:void(0)\" onclick=\"getAboutSection()\">About</a> <br/>\
+        								   <a href=\"javascript:void(0)\" onclick=\"getServicesSection()\">Services</a> <br/>\
+        								   <a href=\"javascript:void(0)\" onclick=\"getStudentPortalSection()\">Student Portal</a> <br/>\
+        								   <a href=\"javascript:void(0)\" onclick=\"getContactSection()\">Contact</a> <br/>";
 			}
 
 			/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
@@ -53,18 +58,49 @@
   				navBarElement.style.backgroundColor = "white";
   				document.getElementById("sideNavMain").style.marginLeft = "0";
   				navBarElement.innerHTML = "";
+  				document.getElementById("sideContent").innerHTML = "";
+			}
+			
+			/* About section html generation */
+			function getAboutSection() {
+				var element = document.getElementById("sideContent");
+				element.innerHTML= "<h5>About us</h5>\
+									<p>Our Mission: To seek individuals who are willing to become informed citizens,\
+									thoughtful stewards, critical thinkers, and responsible leaders.</p>\
+									<p>If you would like to apply click <a href=\"404.html\">here</a></p>\
+									";		
+			}
+			
+			function getServicesSection() {
+				var element = document.getElementById("sideContent");
+				element.innerHTML= "<h5>Services</h5>\
+									<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
+									<p>If you have any questions about classes please reach out to: registration@example.com</p>\
+									<p>Any other undergraduate inquires please reach out to: underGradHelp@example.com</p>";	
+			}
+			
+			function getContactSection() {
+				var element = document.getElementById("sideContent");
+				element.innerHTML= "<h5>Contact us</h5>\
+									<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
+									<p>If you have any questions about housing please reach out to: campuslife@example.com</p>\
+									<p>all other requests can be asked at: help@example.com</p>";	
+			}
+			
+			function getStudentPortalSection() {
+				var element = document.getElementById("sideContent");
+				element.innerHTML= "<h5>Student Portal</h5>\
+									<a href=\"404.html\">Undergraduate Email</a><br\>\
+									<a href=\"404.html\">Undergraduate Finances</a><br\>\
+									<a href=\"404.html\">Undergraduate Mentorship</a><br\>\
+									<a href=\"404.html\">Undergraduate Classes</a>";	
 			}
 		</script>
 
 		<!-- Start of side navigation bar -->
-		<div id="sideNavMain">
-        	<div id ="sideNavBar" class="sideNavigationBar">
-        		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br/>
-        		<a href="#">About</a> <br/>
-  				<a href="#">Services</a> <br/>
-  				<a href="#">Clients</a> <br/>
-  				<a href="contact.html">Contact</a> <br/>
-        	</div>
+		<div id="sideNavMain" class="d-flex flex-row">
+        	<div id ="sideNavBar" class="p-2"></div>
+        	<div id="sideContent" class="p-2"></div>
 		</div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
