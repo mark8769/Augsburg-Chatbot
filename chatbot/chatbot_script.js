@@ -19,7 +19,7 @@ function chatbotMoveUp() {
 
 function chatbotMoveDown() {
   var elem = document.getElementById("chatbotAnimationElement");
-  var pos = elem.style.bottom;
+  var pos = 100;
   console.log(pos);
   clearInterval(id);
   id = setInterval(frame, 10);
@@ -27,9 +27,8 @@ function chatbotMoveDown() {
     if (pos == 0) {
       clearInterval(id);
     } else {
-      pos = pos - 1; 
+      pos--; 
       elem.style.bottom = pos + 'px';
-      console.log(elem.style.bottom);
     }
   }
   changeChatbotImage("chatbot/images/chatbot_head.jpg", 108, 124, "Up");
