@@ -37,6 +37,10 @@ function chatbotMoveDown() {
 
 function loadDialogOptions() {
 	console.log("Dialog options not implemented yet"); // TODO: Remove
+	var elem = document.getElementById("chatbotSelectionItems");
+	
+	// PUT YOUR OPTIONS TO BE ADEED IN THE DROP DOWN MENU BELOW
+	elem.innerHTML = "";
 }
 
 function changeChatbotImage(filepath, height, width, option) {

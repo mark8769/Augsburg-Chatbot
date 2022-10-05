@@ -1,8 +1,6 @@
 #chatbotAnimationArea {
-  
   height: 400px;
   position: relative;
-  background: yellow;
 }
 
 #chatbotAnimationElement {
@@ -11,5 +9,4 @@
   position: absolute;
   right: 10%;
   bottom: 0%;
-  background: red;
 }
