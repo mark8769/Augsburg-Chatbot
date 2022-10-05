@@ -6,7 +6,6 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <link href="navbar.css" rel="stylesheet">
         <title>Academic Advising</title>
-        
         <!-- Logo Header-->
 		<img src="images/augsburg_university_logo_big.jpg" alt="Augsburg University Logo" width="261.79" height="100">
     </head>
@@ -30,6 +29,18 @@
         <!-- End of navigation bar -->
 
         <h3 style="padding: 25px;">Welcome to Academic Advising!</h3>
+
+        <!-- Use any element to open the sidenav -->
+		    <span onclick="openNav()" style="padding-left: 5px">Open</span>
+		
+		    <!-- Code for Side navigation bar -->
+		    <script src="scripts/academicAdvising.js"></script>
+
+		    <!-- Start of side navigation bar -->
+		    <div id="sideNavMain" class="d-flex flex-row">
+        	<div id ="sideNavBar" class="p-2"></div>
+        	<div id="sideContent" class="p-2"></div>
+		    </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     </body>
