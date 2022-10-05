@@ -1,5 +1,5 @@
 var id = null;
-function chatbotMove() {
+function chatbotMoveUp() {
   var elem = document.getElementById("chatbotAnimationElement"); 
   var pos = 0;
   clearInterval(id);
@@ -12,9 +12,38 @@ function chatbotMove() {
       elem.style.bottom = pos + 'px';
     }
   }
+  
+  changeChatbotImage("chatbot/images/chatbot_greeting.jpg", 259, 194, "Down");
+  loadDialogOptions();
+}
+
+function chatbotMoveDown() {
+  var elem = document.getElementById("chatbotAnimationElement");
+  var pos = elem.style.bottom;
+  console.log(pos);
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 0) {
+      clearInterval(id);
+    } else {
+      pos = pos - 1; 
+      elem.style.bottom = pos + 'px';
+      console.log(elem.style.bottom);
+    }
+  }
+  changeChatbotImage("chatbot/images/chatbot_head.jpg", 108, 124, "Up");
   loadDialogOptions();
 }
 
 function loadDialogOptions() {
-	console.log("Dialog options not implemented yet");
+	console.log("Dialog options not implemented yet"); // TODO: Remove
+}
+
+function changeChatbotImage(filepath, height, width, option) {
+	var elem = document.getElementById("chatbotAnimationElement");
+	elem.innerHTML= "<img src=\"" + filepath + "\" height=\"" + height + "px\" \
+	width=\"" + width + "px\" onclick=\"chatbotMove" + option + "()\"></img>";
+	console.log(elem.innerHTML);
+	console.log("Chatbot Image has been updated"); // TODO: Remove
 }
