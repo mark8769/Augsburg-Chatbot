@@ -37,3 +37,19 @@ pip install git+https://github.com/vpol/text.git --no-deps
 pip install git+https://github.com/RasaHQ/rasa-sdk@3.0.2 --no-deps
 pip install git+https://github.com/RasaHQ/rasa.git@3.0.4 --no-deps
 ```
+
+
+## Running Rasa
+
+Start the rasa chatbot (default is http://localhost:5005/ or http://0.0.0.0:5005/ ):
+
+rasa run --enable-api --cors "*"
+
+Host website on localhost:8080 or whatever you like (I'm using https://www.npmjs.com/package/http-server )
+
+In root use following command (find on http://localhost:8080/ ) :
+
+http-server
+
+
+
