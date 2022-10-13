@@ -8,20 +8,22 @@
 # This is a simple example for a custom action which utters "Hello World!"
 
 # from typing import Any, Text, Dict, List
-#
+
 # from rasa_sdk import Action, Tracker
 # from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
+
+
+# class FinancialHelp(Action):
+
+#     def name(self) -> Text: 
+#         # text in this case would be our new Action
+#         # https://rasa.com/docs/rasa/custom-actions
+#         return "action_financial_help"
+
 #     def run(self, dispatcher: CollectingDispatcher,
 #             tracker: Tracker,
 #             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
+
+#         dispatcher.utter_message(text="click on financial services link")
+
 #         return []

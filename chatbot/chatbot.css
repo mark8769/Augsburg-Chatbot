@@ -1,0 +1,12 @@
+#chatbotAnimationArea {
+  height: 400px;
+  position: relative;
+}
+
+#chatbotAnimationElement {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 10%;
+  bottom: 0%;
+}
