@@ -33,9 +33,26 @@
         </nav>
         <!-- End of navigation bar -->
                 
-        <!-- Chatwidget chat UI -->
-        <div id="rasa-chat-widget" data-websocket-url="http://0.0.0.0:5005/"></div>
-        <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+        <script>!(function () {
+          let e = document.createElement("script"),
+            t = document.head || document.getElementsByTagName("head")[0];
+          (e.src =
+            "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.0/lib/index.js"),
+            // Replace 1.x.x with the version that you want
+            (e.async = !0),
+            (e.onload = () => {
+              window.WebChat.default(
+                {
+                  customData: { language: "en" },
+                  socketUrl: "http://localhost:5005",
+                  // add other props here
+                },
+                null
+              );
+            }),
+            t.insertBefore(e, t.firstChild);
+        })();
+        </script>
 
         <!-- Bootstrap javascript files -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
