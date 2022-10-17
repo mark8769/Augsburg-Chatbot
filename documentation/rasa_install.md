@@ -1,12 +1,12 @@
 #Install Rasa#
 
-**Windows/Mac**
+**Windows**
 
 Quick Install Available here
 
 https://rasa.com/docs/rasa/installation
 
-Make a virtual environment with following command, I am using python 3.7.8 (old python version with installer)
+Make a virtual environment with following command, I am using python 3.7.8 https://www.python.org/downloads/release/python-378/
 
 ```
 python3 -m venv ./venv
@@ -30,9 +30,9 @@ Install Rasa, version I got to work
 pip3 install rasa==2.3.4
 ```
 
-'''
+```
 pip3 uninstall python-socketio
-'''
+```
 
 ```
 pip3 install python-socket-io==4.6.1
