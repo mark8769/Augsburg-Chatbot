@@ -44,9 +44,14 @@ function loadDialogOptions() {
 					  <a class=\"nav-item nav-link\" href=\"post-grad.html\">General Post-Graduates</a>\
 					  <a class=\"nav-item nav-link\" href=\"under-grad.html\">General Under-Graduates</a>\
 					  <a class=\"nav-item nav-link\" href=\"academic_advising.html\">General Academic Advising</a>\
-					  <a class=\"nav-item nav-link\" onclick=\"feelingLucky()\">I'm feeling lucky!</a>\
+					  <p></p>\
 					  <a class=\"nav-item nav-link\" href=\"index.html\">If none of those helped... you could try our AI chatbot?</a>\
+					  <p></p>\
+					  <p></p>\
+					  <a class=\"nav-item nav-link\" onclick=\"feelingLucky()\">I'm feeling lucky!</a>\
 					  ";
+					  
+	elem.style = "padding: 10px;";
 }
 
 function removeDialogOptions() {
