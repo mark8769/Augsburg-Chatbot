@@ -10,3 +10,12 @@
   right: 10%;
   bottom: 0%;
 }
+
+#chatbotSelectionItems {
+	/*width: 50px;*/
+	background-color: LightGray;
+	/*height: 50px;*/
+	position: absolute;
+	right: 15%;
+	bottom: 3%;
+}
