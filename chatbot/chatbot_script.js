@@ -32,7 +32,7 @@ function chatbotMoveDown() {
     }
   }
   changeChatbotImage("chatbot/images/chatbot_head.jpg", 108, 124, "Up");
-  loadDialogOptions();
+  removeDialogOptions();
 }
 
 function loadDialogOptions() {
@@ -55,7 +55,8 @@ function loadDialogOptions() {
 }
 
 function removeDialogOptions() {
-
+	var elem = document.getElementById("chatbotSelectionItems").innerHTML = "";
+	elem.sytle = "";
 }
 
 function feelingLucky() {
