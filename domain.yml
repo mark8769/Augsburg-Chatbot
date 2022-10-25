@@ -1,4 +1,4 @@
-version: "3.2"
+version: "3.3"
 
 intents:
   - greet
@@ -7,6 +7,7 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
+  - mood_neutral
   - bot_challenge
   - faq
   - chitchat/ask_name
@@ -26,6 +27,9 @@ responses:
   
   utter_unsure:
   - text: "hmmm...I'm not sure if I know that yet"
+  
+  utter_thatIsGood:
+  - text: "That's good!"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"

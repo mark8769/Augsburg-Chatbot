@@ -74,6 +74,45 @@ stories:
     - action: utter_faq_ready
 ###--------------------------------- End Happy Paths ----------------------------------###
 
+###------------------------------- Start Neutral Paths --------------------------------###
+- story: neutral path 1
+    steps:
+    - user: |
+        hi
+    intent: greet
+    - action: utter_greet
+    - user: |
+        I'm okay
+    intent: mood_neutral
+    - action: utter_thatIsGood
+    - action: utter_faq_ready
+    
+- story: neutral path 2
+    steps:
+    - user: |
+        hi
+    intent: greet
+    - action: utter_greet
+    - user: |
+        I'm hanging in there
+    intent: mood_neutral
+    - action: utter_thatIsGood
+    - action: utter_faq_ready
+    
+- story: neutral path 3
+    steps:
+    - user: |
+        hi
+    intent: greet
+    - action: utter_greet
+    - user: |
+        I'm living the dream
+    intent: mood_neutral
+    - action: utter_thatIsGood
+    - action: utter_faq_ready
+        
+###-------------------------------- End Neutral Paths ---------------------------------###
+
 ###--------------------------------- Start Sad Paths ----------------------------------###
 - story: sad path 1
   steps:
