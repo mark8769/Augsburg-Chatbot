@@ -2,6 +2,8 @@
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
 stories:
+
+###-------------------------------- Start Happy Paths ---------------------------------###
 - story: happy path 1
   steps:
   - user: |
@@ -27,7 +29,91 @@ stories:
       bye-bye!
     intent: goodbye
   - action: utter_goodbye
+  
+- story: happy path 3
+    steps:
+    - user: |
+        hello there!
+    intent: greet
+    - action: utter_grreet
+    - user: |
+        amazing
+    intent: mood_great
+    - action: utter_happy
+    - action: utter_faq
+ 
+  ### branch needs to be refined ###   
+- story: happy path 4
+    steps:
+    - user: |
+        hello there!
+    intent: greet
+    - action: utter_grreet
+    - user: |
+        amazing
+    intent: mood_great
+    - action: utter_happy
+    - user: |
+        Can you help me with something?
+    -intent: faq 
+  ### branch needs to be refined ###
+    
+- story: happy path 5
+    steps:
+    - user: |
+        hello there!
+    intent: greet
+    - action: utter_grreet
+    - user: |
+        amazing
+    intent: mood_great
+    - action: utter_happy
+    - user: |
+        Can you help me with something?
+    -intent: faq
+    - action: utter_faq_ready
+###--------------------------------- End Happy Paths ----------------------------------###
 
+###------------------------------- Start Neutral Paths --------------------------------###
+- story: neutral path 1
+    steps:
+    - user: |
+        hi
+    intent: greet
+    - action: utter_greet
+    - user: |
+        I'm okay
+    intent: mood_neutral
+    - action: utter_thatIsGood
+    - action: utter_faq_ready
+    
+- story: neutral path 2
+    steps:
+    - user: |
+        hi
+    intent: greet
+    - action: utter_greet
+    - user: |
+        I'm hanging in there
+    intent: mood_neutral
+    - action: utter_thatIsGood
+    - action: utter_faq_ready
+    
+- story: neutral path 3
+    steps:
+    - user: |
+        hi
+    intent: greet
+    - action: utter_greet
+    - user: |
+        I'm living the dream
+    intent: mood_neutral
+    - action: utter_thatIsGood
+    - action: utter_faq_ready
+        
+###-------------------------------- End Neutral Paths ---------------------------------###
+
+###--------------------------------- Start Sad Paths ----------------------------------###
 - story: sad path 1
   steps:
   - user: |
@@ -75,17 +161,48 @@ stories:
       no
     intent: deny
   - action: utter_goodbye
+  
+- story: sad path 4
+    steps:
+    - user: |
+        hi
+    intent: greet
+    - action: utter_greet
+    - user: |
+        could be better
+    intent: mood_unhappy
+    - action: utter_agree
+    - action: utter_faq
+    
+- story: sad path 4
+    steps:
+    - user: |
+        hi
+    intent: greet
+    - action: utter_greet
+    - user: |
+        could be better
+    intent: mood_unhappy
+    - action: utter_agree
+    - user: |
+        Can you help me find something?
+    - action: utter_faq_ready
+###---------------------------------- End Sad Paths -----------------------------------###
 
+###-------------------------- Start Greetings and Goodbyes ----------------------------###
 - story: say goodbye
   steps:
   - user: |
       bye-bye!
     intent: goodbye
   - action: utter_goodbye
+###--------------------------- End Greetings and Goodbyes -----------------------------###
 
+###------------------------------ Start Bot Challenges --------------------------------###
 - story: bot challenge
   steps:
   - user: |
       are you a bot?
     intent: bot_challenge
   - action: utter_iamabot
+###------------------------------- End Bot Challenges ---------------------------------###
