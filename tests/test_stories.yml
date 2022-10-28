@@ -174,7 +174,7 @@ stories:
     - action: utter_agree
     - action: utter_faq
     
-- story: sad path 4
+- story: sad path 5
     steps:
     - user: |
         hi
