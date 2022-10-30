@@ -1,4 +1,9 @@
-version: "3.3"
+# Version should match rasa version, would be neat if someone could get rasa3 to work
+# on frontend and run pip freeze > requirements.txt to update dependencies file
+version: "2.0"
+
+# You can follow along here
+# https://rasa.com/docs/rasa/2.x/training-data-format/#training-examples
 
 intents:
   - greet
@@ -97,7 +102,7 @@ nlu:
         sentiment: inquisitive
     examples:
         - text: |
-            what's up?  
+            what's up?
 ###-------------------------- End Training Information Section ------------------------###
 
 ###-------------------------- Start Retrieval Intents Section -------------------------###
