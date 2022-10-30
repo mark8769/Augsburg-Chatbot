@@ -9,7 +9,7 @@ https://rasa.com/docs/rasa/2.x/
 Make a virtual environment with following command, I am using python 3.7.8 https://www.python.org/downloads/release/python-378/
 
 ```
-python3 -m venv ./venv
+python -m venv ./venv
 ```
 
 On windows, activate environment with this command
@@ -24,18 +24,21 @@ Update pip inside environment
 pip3 install -U pip
 ```
 
-Install Rasa, version I got to work
+Install requirements file (contains all dependencies) from root of project
 
 ```
-pip3 install rasa==2.3.4
+pip3 install documentation\requirements.txt
 ```
 
-```
-pip3 uninstall python-socketio
-```
+You might have to update your pyenv file if rasa is incompatible with current python version you are using.
+Head to venv\pyenv and update file to use different python version. Location of file on macbook
+might look something like usr/local/bin/python.version or usr/bin/python.version. You will need to have python.version installed
+on your computer for pyenv to be able to find it. Download is above.
 
 ```
-pip3 install python-socketio==4.6.1
+home = C:\Users\Administrator\AppData\Local\Programs\Python\Python37
+include-system-site-packages = false
+version = 3.7.8
 ```
 
 Check to make sure python-engineio is version 3.13.2 with pip list command (gives you back list of libraries install in virtual env)
@@ -57,16 +60,9 @@ source venv/bin/activate
 Install Rasa, this is the version I got to work. Installing Rasa 3 with pip command still gave me issues on windows for some reason
 
 ```
-pip3 install rasa==2.3.4
+pip3 install -r documentation/requirements.txt
 ```
 
-```
-pip3 uninstall python-socketio
-```
-
-```
-pip3 install python-socketio==4.6.1
-```
 
 ## Running Rasa
 
