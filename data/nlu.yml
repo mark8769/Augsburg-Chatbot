@@ -116,6 +116,25 @@ nlu:
   - text: |
       what's up?
 
+- intent: faq
+  examples: |
+    - faq
+    - I have a question
+    - question
+    - answer
+    - facts
+
+- intent: academicAdvising_location
+  examples: |
+    - academics
+    - academic advising
+    - mentor
+    - tutor
+    - scheduling
+    - probation
+    - calendar
+    
+
   ###-------------------------- Start Retrieval Intents(input) Section -------------------###
 - intent: chitchat/ask_name
   examples: |
