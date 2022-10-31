@@ -72,13 +72,13 @@ responses:
   - text: "What do you like doing in your free time?"
 
   utter_postGrad_location:
-  - link: "post-grad.html"
+  - text: "[Post Grad Resources](post-grad.html)"
   
   utter_underGrad_location:
-  - link: "under-grad.html"
+  - text: "[Under Grad Resources](under-grad.html)"
   
   utter_academicAdvising_location:
-  - link: "academic_advising.html"
+  - text: "[Academic Advising](academic_advising.html)"
   
   utter_homePage_location:
   - text: "You're on this page silly :)"
