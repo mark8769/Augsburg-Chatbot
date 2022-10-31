@@ -12,14 +12,17 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
-  - mood_neutral
   - bot_challenge
+### --------------------------- Custom intents start here -------------------------------###
+  - mood_neutral
   - faq
   - chitchat/ask_name
   - chitchat/ask_weather
   - chitchat/ask_hobbies
+### ---------------------------- Custom intents end here ---------------------------------###
 
 responses:
+### ------------------------------- Default Rasa Responses -------------------------------###
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -38,6 +41,20 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+### ----------------------- End of Default Rasa Responses(Add yours below) ----------------###
+  utter_faq:
+  - text: "What can I help you with?"
+  
+  utter_faq_ready:
+  - text: "How can I help?"
+  
+  utter_unsure:
+  - text: "hmmm...I'm not sure if I know that yet"
+  
+  utter_thatIsGood:
+  - text: "That's good!"
+
+###--------------------------------- End Response Section -----------------------------###
 
 session_config:
   session_expiration_time: 60
