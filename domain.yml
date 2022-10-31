@@ -1,4 +1,9 @@
-version: "3.3"
+# Version should match rasa version, would be neat if someone could get rasa3 to work
+# on frontend and run pip freeze > requirements.txt to update dependencies file
+version: "2.0"
+
+# You can follow along here
+# https://rasa.com/docs/rasa/2.x/training-data-format/#training-examples
 
 intents:
   - greet
@@ -7,36 +12,28 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
-  - mood_neutral
   - bot_challenge
+### --------------------------- Custom intents start here -------------------------------###
+  - mood_neutral
   - faq
   - chitchat/ask_name
   - chitchat/ask_weather
   - chitchat/ask_hobbies
+  - postGrad_location
+  - underGrad_location
+  - academicAdvising_location
+  - homePage_location
 
-###-------------------------------- Start Response Section ----------------------------###
+### ---------------------------- Custom intents end here ---------------------------------###
+
 responses:
+### ------------------------------- Default Rasa Responses -------------------------------###
   utter_greet:
   - text: "Hey! How are you?"
-  
-  utter_faq:
-  - text: "What can I help you with?"
-  
-  utter_faq_ready:
-  - text: "How can I help?"
-  
-  utter_unsure:
-  - text: "hmmm...I'm not sure if I know that yet"
-  
-  utter_thatIsGood:
-  - text: "That's good!"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_agree:
-  - text: "I bet" # maybe add other options as well?
 
   utter_did_that_help:
   - text: "Did that help you?"
@@ -49,7 +46,31 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+### ----------------------- End of Default Rasa Responses(Add yours below) ----------------###
+  utter_faq:
+  - text: "What can I help you with?"
   
+  utter_faq_ready:
+  - text: "How can I help?"
+  
+  utter_unsure:
+  - text: "hmmm...I'm not sure if I know that yet"
+  
+  utter_thatIsGood:
+  - text: "That's good!"
+
+  utter_mood_neutral:
+  - text: "That is fine"
+
+  utter_chitchat/ask_name:
+  - text: "What is your name?"
+
+  utter_chitchat/ask_weather:
+  - text: "The weather is fine today {Maybe make some function call in actions.py}"
+
+  utter_chichat/ask_hobbies:
+  - text: "What do you like doing in your free time?"
+
   utter_postGrad_location:
   - link: "post-grad.html"
   
@@ -59,68 +80,9 @@ responses:
   utter_academicAdvising_location:
   - link: "academic_advising.html"
   
-  utter_homePage_locaiton:
+  utter_homePage_location:
   - text: "You're on this page silly :)"
-
 ###--------------------------------- End Response Section -----------------------------###
-
-###---------------------------- Start General Stories Section -------------------------###
-stories:
-    - story: greet and faq
-        steps:
-        - intent: greet
-        - action: utter_greet
-        - intent: faq
-        - action: utter_faq
-###----------------------------- End General Stories Section --------------------------###
-
-###------------------------- Start Training Information Section -----------------------###
-nlu:
-    - intent: greet
-    metadata:
-        sentiment: neutral
-    examples:
-        - text: |
-            hi
-        - text: |
-            hey
-        - text: |
-            hello
-    
-    metadata:
-        sentiment: positive
-    examples:
-        - text: |
-            hey there!
-        
-    metadata:
-        sentiment: inquisitive
-    examples:
-        - text: |
-            what's up?  
-###-------------------------- End Training Information Section ------------------------###
-
-###-------------------------- Start Retrieval Intents Section -------------------------###
-- intent: chitchat/ask_name
-  examples: |
-    - What is your name?
-    - May I know your name?
-    - What do people call you?
-    - Do you have a name for yourself?
-
-- intent: chitchat/ask_weather
-  examples: |
-    - What's the weather like today?
-    - Does it look sunny outside today?
-    - Oh, do you mind checking the weather for me please?
-    - I like sunny days in Minnesota.
-
-- intent: chitchat/ask_hobbies
-    examples: |
-        - What do you do for fun?
-        - What is there to do around here?
-        - What hobbies do you have?
-###--------------------------- End Retrieval Intents Section --------------------------###
 
 session_config:
   session_expiration_time: 60
