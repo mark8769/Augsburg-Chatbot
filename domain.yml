@@ -1,4 +1,9 @@
+# Version should match rasa version, would be neat if someone could get rasa3 to work
+# on frontend and run pip freeze > requirements.txt to update dependencies file
 version: "2.0"
+
+# You can follow along here
+# https://rasa.com/docs/rasa/2.x/training-data-format/#training-examples
 
 intents:
   - greet
@@ -7,7 +12,12 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
+  - mood_neutral
   - bot_challenge
+  - faq
+  - chitchat/ask_name
+  - chitchat/ask_weather
+  - chitchat/ask_hobbies
 
 responses:
   utter_greet:
