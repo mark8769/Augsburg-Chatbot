@@ -35,10 +35,10 @@ https://rasa.com/docs/rasa/2.x/actions
 - chitchat/ask_hobbies - Done
 - ... (Define intents we want, and add as you go)
 
-- postGrad_location
-- underGrad_location
-- academicAdvising_location - Done
-- homePage_location
+- postGrad_location - Done (Add more if you can think of any)
+- underGrad_location - Done (Add more if you can think of any)
+- academicAdvising_location - Done (Add more if you can think of any)
+- homePage_location - Done
 
 **Make an utter_intentName in domain.yml file under responses section, else during training bottom error happens during training**
 
@@ -49,10 +49,10 @@ https://rasa.com/docs/rasa/2.x/actions
 - chitchat/ask_hobbies - Done
 - ... (Define intents we want, and add as you go)
 
-- postGrad_location
-- underGrad_location
+- postGrad_location - Done
+- underGrad_location - Done
 - academicAdvising_location - Done
-- homePage_location
+- homePage_location - Done
 
 
 **Define stories for users under data/stories.yml. Can be in domain.yml under stories keyword but file will get long.**
@@ -61,17 +61,17 @@ https://rasa.com/docs/rasa/2.x/actions
 
 Need more stories to guide AI in conversations.
 
-- mood_neutral -
+- mood_neutral - Done
 - faq - Done
 - chitchat/ask_name -
 - chitchat/ask_weather -
 - chitchat/ask_hobbies -
 - ... (Define rules for intents, and add as you go)
 
-- postGrad_location
-- underGrad_location
-- academicAdvising_location
-- homePage_location
+- postGrad_location - (neutral path only, need happy and sad)
+- underGrad_location - (neutral path only, need happy and sad)
+- academicAdvising_location - (neutral path only, need happy and sad)
+- homePage_location - (neutral path only, need happy and sad)
 
 **Define test_stories in tests/test_stories so AI has idea of how we want it to respond**
 
