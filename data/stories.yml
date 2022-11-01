@@ -84,6 +84,15 @@ stories:
   - action: utter_greet
   - intent: chitchat/ask_name
   - action: utter_imabot
+  
+- story: greet, ask name, and faq
+  steps:
+  - intent: greet
+  - action: utter
+  - intent: chitchat/ask_name
+  - action: utter_imabot
+  - intent: faq
+  - action: utter_faq
 
 - story: No greet, give me what I need now (homepage intent)
   steps:
