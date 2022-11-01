@@ -9,7 +9,7 @@ stories:
   - intent: mood_great
   - action: utter_happy
   - checkpoint: successful_greet
-###-------------------------- Sad Paths ------------------------------------------------###
+###------------------------------ Sad Paths -------------------------------------------###
 - story: sad path 1
   steps:
   - intent: greet
@@ -30,7 +30,7 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-###----------------------------End of Sad Paths ---------------------------------------###
+###--------------------------- End of Sad Paths ---------------------------------------###
 
 ###---------------------------- Neutral Path ------------------------------------------###
 - story: neutral path as a checkpoint (successful_greet)
@@ -66,7 +66,7 @@ stories:
   - checkpoint: successful_greet
   - intent: underGrad_location
   - action: utter_underGrad_location
-###----------------------------  End Neutral Path --------------------------------------###
+###----------------------------  End Neutral Path -------------------------------------###
 
 ###---------------------------- Start General Stories Section -------------------------###
 - story: greet and faq
