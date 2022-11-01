@@ -80,5 +80,8 @@ In root directory run following command:
 python -m http.server
 ```
 
+To run custom actions inside actions folder. Default is http://localhost:5055/
 
-
+```
+rasa run actions
+```
