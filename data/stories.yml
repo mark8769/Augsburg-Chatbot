@@ -1,7 +1,7 @@
 version: "2.0"
 
 stories:
-
+###----------------------------- Happy Paths ------------------------------------------###
 - story: happy path
   steps:
   - intent: greet
@@ -9,6 +9,8 @@ stories:
   - intent: mood_great
   - action: utter_happy
   - checkpoint: successful_greet
+###--------------------------- End Happy Paths ----------------------------------------###
+
 ###------------------------------ Sad Paths -------------------------------------------###
 - story: sad path 1
   steps:
