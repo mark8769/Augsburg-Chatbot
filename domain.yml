@@ -72,17 +72,25 @@ responses:
   - text: "What do you like doing in your free time?"
 
   utter_postGrad_location:
-  - text: "[Post Grad Resources](post-grad.html)"
+  - text: "Here is a link to postgrad resouces, hope this helped! [Post-grad Resources](post-grad.html)"
   
   utter_underGrad_location:
-  - text: "[Under Grad Resources](under-grad.html)"
+  - text: "Here is a link to undergrad resources, hope this helped! [Under-grad Resources](under-grad.html)"
   
   utter_academicAdvising_location:
-  - text: "[Academic Advising](academic_advising.html)"
+  - text: "Here is a link to academic advising, hope this helped! [Academic Advising](academic_advising.html)"
   
   utter_homePage_location:
   - text: "You're on this page silly :)"
 ###--------------------------------- End Response Section -----------------------------###
+
+actions:
+- utter_academicAdvising_location
+- utter_chitchat
+- utter_faq_ready
+- utter_greet
+- utter_thatIsGood
+- action_tell_weather
 
 session_config:
   session_expiration_time: 60
