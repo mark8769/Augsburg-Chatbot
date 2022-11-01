@@ -8,7 +8,8 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
-
+  - checkpoint: successful_greet
+###-------------------------- Sad Paths ------------------------------------------------###
 - story: sad path 1
   steps:
   - intent: greet
@@ -28,3 +29,75 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+###----------------------------End of Sad Paths ---------------------------------------###
+
+###---------------------------- Neutral Path ------------------------------------------###
+- story: neutral path as a checkpoint (successful_greet)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_neutral
+  - action: utter_faq_ready
+  - checkpoint: successful_greet
+
+  # Start following stories from previous checkpoint 
+  # (if greet story followed all the way through)
+- story: neutral_successful_greet (academic_advising)
+  steps:
+  - checkpoint: successful_greet
+  - intent: academicAdvising_location
+  - action: utter_academicAdvising_location
+
+- story: neutral_successful_greet (homepage)
+  steps:
+  - checkpoint: successful_greet
+  - intent: homePage_location
+  - action: utter_homePage_location
+
+- story: neutral_successful_greet (post-grad page)
+  steps:
+  - checkpoint: successful_greet
+  - intent: postGrad_location
+  - action: utter_postGrad_location
+
+- story: neutral_successful_greet (under-grad page)
+  steps:
+  - checkpoint: successful_greet
+  - intent: underGrad_location
+  - action: utter_underGrad_location
+###----------------------------  End Neutral Path --------------------------------------###
+
+###---------------------------- Start General Stories Section -------------------------###
+- story: greet and faq
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq
+  - action: utter_faq
+
+- story: No greet, give me what I need now (homepage intent)
+  steps:
+  - intent: homePage_location
+  - action: utter_homePage_location
+
+- story: No greet, give me what I need now (academic advising intent)
+  steps:
+  - intent: underGrad_location
+  - action: utter_underGrad_location
+
+- story: No greet, give me what I need now (post-grad page intent)
+  steps:
+  - intent: postGrad_location
+  - action: utter_postGrad_location
+
+- story: No greet, give me what I need now (under-grad page intent)
+  steps:
+  - intent: underGrad_location
+  - action: utter_underGrad_location
+
+- story: No greet, give me the weather
+  steps:
+  - intent: chitchat/ask_weather
+  - action: action_tell_weather
+###----------------------------- End General Stories Section --------------------------###

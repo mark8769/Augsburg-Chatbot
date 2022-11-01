@@ -1,7 +1,10 @@
 version: "2.0"
-
+# classes for multiclass classification
+# for each piece of input data(message from user) classify as an intent
 nlu:
 - intent: greet
+  metadata:
+    sentiment: neutral
   examples: |
     - hey
     - hello
@@ -16,7 +19,12 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - hi
+    - hey
+    - hello
+    - hey there!
+    - what's up?
+    - Hi
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,7 +38,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +46,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -49,7 +55,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -66,7 +71,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -81,12 +85,73 @@ nlu:
     - not good
     - not very good
     - extremly sad
-    - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: faq
+  examples: |
+    - faq
+    - I have a question
+    - question
+    - answer
+    - facts
+- intent: academicAdvising_location
+  examples: |
+    - academics
+    - academic advising
+    - mentor
+    - tutor
+    - scheduling
+    - probation
+    - calendar
+- intent: underGrad_location
+  examples: |
+    - student
+    - bachelors
+    - undergrad
+    - freshman
+    - sophmore
+    - junior
+    - senior
+    - majors
+    - minors
+    - internship
+    - graduation
+- intent: postGrad_location
+  examples: |
+    - masters
+    - postgrad
+    - post
+    - doctorate
+    - phd
+    - jobs
+- intent: homePage_location
+  examples: |
+    - homepage
+    - home
+- intent: chitchat/ask_name
+  examples: |
+    - What is your name?
+    - May I know your name?
+    - What do people call you?
+    - Do you have a name for yourself?
+- intent: chitchat/ask_weather
+  examples: |
+    - What's the weather like today?
+    - Does it look sunny outside today?
+    - Oh, do you mind checking the weather for me please?
+    - I like sunny days in Minnesota.
+- intent: chitchat/ask_hobbies
+  examples: |
+    - What do you do for fun?
+    - What is there to do around here?
+    - What hobbies do you have?
+- intent: mood_neutral
+  examples: |
+    - I'm okay
+    - okay
+    - ok
