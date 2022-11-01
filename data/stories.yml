@@ -1,4 +1,4 @@
-version: "2.0"
+version: "2.1"
 
 stories:
 ###----------------------------- Happy Paths ------------------------------------------###
@@ -77,6 +77,13 @@ stories:
   - action: utter_greet
   - intent: faq
   - action: utter_faq
+
+- story: greet and ask name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: chitchat/ask_name
+  - action: utter_imabot
 
 - story: No greet, give me what I need now (homepage intent)
   steps:
