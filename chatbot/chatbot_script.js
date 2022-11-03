@@ -49,6 +49,7 @@ function loadDialogOptions() {
 					  <p></p>\
 					  <p></p>\
 					  <a class=\"nav-item nav-link\" onclick=\"feelingLucky()\">I'm feeling lucky!</a>\
+            <a onclick=\"return theFunction();\">Test Text: More Info Academic Advising</a>\
 					  ";
 					  
 	elem.style = "padding: 10px;";
@@ -73,4 +74,71 @@ function changeChatbotImage(filepath, height, width, option) {
 	width=\"" + width + "px\" onclick=\"chatbotMove" + option + "()\"></img>";
 	//console.log(elem.innerHTML);
 	//console.log("Chatbot Image has been updated"); // TODO: Remove
+}
+//---------------------------------------------------
+//Below is what I have added so Far! + line 52!
+//fn1();
+
+var originalText = "<h3>Hi, how can I help you?</h3>\
+<a class=\"nav-item nav-link\" href=\"post-grad.html\">Original Text</a>\
+";
+
+function theFunction(){
+  console.log("Has Been Clicked");
+  var myStringArray = stringOptionsArrayToString(academicArray);
+  var elem = document.getElementById("chatbotSelectionItems");
+  //elem.innerHTML = originalText;
+  console.log(originalText);
+  elem.innerHTML = generalOutline;
+  console.log(elem.innerHTML);
+}
+
+var generalOutline = "<h5>Here are subsectiuons in our Page click one to see if it helps</h5>\
+<a onclick=\"return aboutInfo();\">AboutMain</a>\
+<p onclick=\"return aboutInfoS();\">StudentService</p>\
+";
+
+function aboutInfo(theString){
+  var elem = document.getElementById("chatbotSelectionItems");
+  elem.innerHTML = aboutTextAcademic;
+}
+
+var aboutTextAcademic = "<p>Purpose of academic advising: Academic Advising educates students, faculty, and staff\
+on the Augsburg curriculum; interprets academic policies and procedures;\
+and supports students in achieving their educational and vocational goals.</p>\
+<h5>How academic advising works</h5>\
+<p>The advisors in Academic Advising are professionals trained to work with students who are new to the university and current \
+students who have questions about the general education requirements and interpretation of the academic procedures and policies of \
+the university. Academic Advising also provides comprehensive academic support for all Augsburg students.\
+Faculty mentors are full time members of specific academic departments who have been at the university at least a full year and have \
+been trained by Academic Advising on advising Augsburg students. Faculty mentors usually work with somewhere between 20–25 advisees \
+majoring in the department. They specialize in advising in their field (English, Biology, Social Work, etc.) but are also trained to\
+advise students on General Education issues.</p>\
+<p>If you would like to apply click <a href=\"404.html\">here</a></p>\
+";
+
+function aboutInfoS(theString){
+  var elem = document.getElementById("chatbotSelectionItems");
+  elem.innerHTML = aboutTextS;
+}
+
+var aboutTextS = "<h5>Services</h5>\
+<p>If you have any questions or inquires about academic advising please reach out to: registration@example.com</p>\
+<h5>Useful Tools</h5>\
+<p>This is a document of academic advisong drop in hours: \
+<a href=\"https://docs.google.com/document/d/1nuyy7NRk2tSEQDSzOWVb1jOfKLdeVXEDWORwI7srjr8/edit#\">Drop in hours</a></p>\
+<p>Where to schedule an appointment: <a href=\"https://augsburg.navigate.eab.com/\">Schedule appointment</a></p>\
+<p>Any other academic advising inquires please reach out to AcademicHelp@example.com</p>";	
+
+//--------------
+
+var academicArray = ["<h3>About</h3>",
+"\<a class=\"nav-item nav-link\" href=\"post-grad.html\">General Post-Graduates</a>"];
+
+function stringOptionsArrayToString(theArray){
+  var longString = "";
+  for (var s of theArray){
+    longString= longString+s+"\n";
+  }
+  console.log(longString);
 }
