@@ -77,3 +77,17 @@ function getStudentPortalSection() {
 						<a href=\"404.html\">Postgraduate Mentorship</a><br\>\
 						<a href=\"404.html\">Postgraduate Classes</a>";	
 }
+//----------------------
+//Below are the changes I have made so far!
+var getTextTest = function() {
+	reurn ("<h5>Student Portal</h5>\
+	<a href=\"404.html\">Postgraduate Email</a><br\>\
+	<a href=\"404.html\">Postgraduate Finances</a><br\>\
+	<a href=\"404.html\">Postgraduate Mentorship</a><br\>\
+	<a href=\"404.html\">Postgraduate Classes</a>")
+}
+var getTextTestPortal = "<h5>Student Portal</h5>\
+	<a href=\"404.html\">Postgraduate Email</a><br\>\
+	<a href=\"404.html\">Postgraduate Finances</a><br\>\
+	<a href=\"404.html\">Postgraduate Mentorship</a><br\>\
+	<a href=\"404.html\">Postgraduate Classes</a>";

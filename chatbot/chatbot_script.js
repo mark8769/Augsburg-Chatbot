@@ -96,6 +96,7 @@ function theFunction(){
 var generalOutline = "<h5>Here are subsectiuons in our Page click one to see if it helps</h5>\
 <a onclick=\"return aboutInfo();\">AboutMain</a>\
 <p onclick=\"return aboutInfoS();\">StudentService</p>\
+<p onclick=\"return aboutInfoPortal();\">StudentPortal</p>\
 ";
 
 function aboutInfo(theString){
@@ -130,6 +131,12 @@ var aboutTextS = "<h5>Services</h5>\
 <p>Where to schedule an appointment: <a href=\"https://augsburg.navigate.eab.com/\">Schedule appointment</a></p>\
 <p>Any other academic advising inquires please reach out to AcademicHelp@example.com</p>";	
 
+function aboutInfoPortal(){
+  var elem = document.getElementById("chatbotSelectionItems");
+  //elem.innerHTML = getTextTest;
+  elem.innerHTML = getTextTestPortal;
+  //console.log(getTextTestPortal);
+}
 //--------------
 
 var academicArray = ["<h3>About</h3>",
@@ -142,3 +149,4 @@ function stringOptionsArrayToString(theArray){
   }
   console.log(longString);
 }
+console.log(getTextTest);
