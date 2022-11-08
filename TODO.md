@@ -9,7 +9,7 @@ https://rasa.com/docs/rasa/2.x/actions
 - faq
 - chitchat/ask_name
 - chitchat/ask_weather
-- chitchat/ask_hobbies
+- chitchat/ask_hobbies 
 - ... (Add more here)
 
 - postGrad_location
