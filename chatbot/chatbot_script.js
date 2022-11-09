@@ -53,6 +53,7 @@ function loadDialogOptions() {
             <p></p>\
             <h6>Click one below for more info</h6>\
             <a onclick=\"return theFunctionAcademic();\">More Info Academic Advising</a>\
+            <p></p>\
             <a onclick=\"return theFunctionPost();\">More Info Post Graduates</a>\
             <p></p>\
 					  ";
