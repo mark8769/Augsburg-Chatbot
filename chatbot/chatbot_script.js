@@ -53,6 +53,8 @@ function loadDialogOptions() {
             <p></p>\
             <h6>Click one below for more info</h6>\
             <a onclick=\"return theFunctionAcademic();\">More Info Academic Advising</a>\
+            <a onclick=\"return theFunctionPost();\">More Info Post Graduates</a>\
+            <p></p>\
 					  ";
 					  
 	elem.style = "padding: 10px;";
@@ -80,6 +82,7 @@ function changeChatbotImage(filepath, height, width, option) {
 }
 //--------------------------------------------------- TODO: Remove unnessary lines Below
 //Below is what I have added so Far! + line 52!
+/* Below is Adacemic Advising info */
 
 function theFunctionAcademic(){
   console.log("Has Been Clicked");
@@ -113,3 +116,40 @@ function AcademicContactInfo(){
   var elem = document.getElementById("chatbotSelectionItems");
   elem.innerHTML = getTextAcademicContact;
 }
+
+/* Below is Postgrad info */ //Current error: Only can get scripts from pages its on!
+//Solution 1: Have a script in every page
+//Solution 2: Find another method
+function theFunctionPost(){
+  console.log("Post GradHas Been Clicked");
+  var elem = document.getElementById("chatbotSelectionItems");
+  elem.innerHTML = generalOutlinePost;
+}
+
+var generalOutlinePost = "<h5>Here is some info for Post graduates, click one to see if it helps</h5>\
+<p onclick=\"return aboutInfoPost();\">About</p>\
+<p onclick=\"return aboutInfoServicePost();\">StudentService</p>\
+<p onclick=\"return PostPortalInfo();\">StudentPortal</p>\
+<a onclick=\"return PostContactInfo();\">Contact Info</a>\
+";
+
+function aboutInfoPost(){
+  var elem = document.getElementById("chatbotSelectionItems");
+  elem.innerHTML = getTextPostgradAbout;
+}
+
+function aboutInfoServicePost(){
+  var elem = document.getElementById("chatbotSelectionItems");
+  elem.innerHTML = getTextPostgradService;
+}
+
+function PostPortalInfo(){
+  var elem = document.getElementById("chatbotSelectionItems");
+  elem.innerHTML = getTextPostgradPortal;
+}
+
+function PostContactInfo(){
+  var elem = document.getElementById("chatbotSelectionItems");
+  elem.innerHTML = getTextPostgradContact;
+}
+/* Below is Undergrad Info*/

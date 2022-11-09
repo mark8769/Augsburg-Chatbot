@@ -60,3 +60,28 @@ function getStudentPortalSection() {
 						<a href=\"404.html\">Postgraduate Mentorship</a><br\>\
 						<a href=\"404.html\">Postgraduate Classes</a>";	
 }
+
+//----------------------
+//Below are the changes I have made so far! TODO: Remove
+
+var getTextPostgradAbout = "<h5>About us</h5>\
+<p>Our Mission: To seek individuals who are willing to become informed citizens,\
+thoughtful stewards, critical thinkers, and responsible leaders.</p>\
+<p>If you would like to apply click <a href=\"404.html\">here</a></p>\
+";
+
+var getTextPostgradService = "<h5>Services</h5>\
+<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
+<p>If you have any questions about classes please reach out to: registration@example.com</p>\
+<p>Any other post-graduate inquires please reach out to postGradHelp@example.com</p>";
+
+var getTextPostgradPortal = "<h5>Student Portal</h5>\
+<a href=\"404.html\">Postgraduate Email</a><br\>\
+<a href=\"404.html\">Postgraduate Finances</a><br\>\
+<a href=\"404.html\">Postgraduate Mentorship</a><br\>\
+<a href=\"404.html\">Postgraduate Classes</a>";
+
+var getTextPostgradContact = "<h5>Contact us</h5>\
+<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
+<p>If you have any questions about housing please reach out to: campuslife@example.com</p>\
+<p>all other requests can be asked at: help@example.com</p>";
