@@ -82,12 +82,10 @@ function changeChatbotImage(filepath, height, width, option) {
 	//console.log(elem.innerHTML);
 	//console.log("Chatbot Image has been updated"); // TODO: Remove
 }
-//--------------------------------------------------- TODO: Remove unnessary lines Below
-//Below is what I have added so Far! + line 52!
+
 /* Below is Adacemic Advising info */
 
 function theFunctionAcademic(){
-  console.log("Has Been Clicked");
   var elem = document.getElementById("chatbotSelectionItems");
   elem.innerHTML = generalOutlineAcademic;
 }
@@ -119,11 +117,8 @@ function AcademicContactInfo(){
   elem.innerHTML = getTextAcademicContact;
 }
 
-/* Below is Postgrad info */ //Current error: Only can get scripts from pages its on!
-//Solution 1: Have a script in every page
-//Solution 2: Find another method
+/* Below is Postgrad info */
 function theFunctionPost(){
-  console.log("Post Grad Has Been Clicked");
   var elem = document.getElementById("chatbotSelectionItems");
   elem.innerHTML = generalOutlinePost;
 }
@@ -156,7 +151,6 @@ function PostContactInfo(){
 }
 /* Below is Undergrad Info*/
 function theFunctionUnder(){
-  console.log("Under Grad Has Been Clicked");
   var elem = document.getElementById("chatbotSelectionItems");
   elem.innerHTML = generalOutlineUnder;
 }
