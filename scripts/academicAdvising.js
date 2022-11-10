@@ -46,8 +46,8 @@ function getStudentPortalSection() {
 	var element = document.getElementById("sideContent");
 	element.innerHTML= getTextAcademicPortal;
 }
-//----------------------
-//Below are the changes I have made so far! TODO: Remove
+
+/* Below is text for chatbot*/
 /* Academic Text */
 var getTextAcademicAbout = "<h5>About us</h5>\
 <p>Purpose of academic advising: Academic Advising educates students, faculty, and staff\
@@ -73,10 +73,10 @@ var getTextAcademicService = "<h5>Services</h5>\
 <p>Any other academic advising inquires please reach out to AcademicHelp@example.com</p>";	
 
 var getTextAcademicPortal = "<h5>Student Portal</h5>\
-<a href=\"404.html\">Postgraduate Email</a><br\>\
-<a href=\"404.html\">Postgraduate Finances</a><br\>\
-<a href=\"404.html\">Postgraduate Mentorship</a><br\>\
-<a href=\"404.html\">Postgraduate Classes</a>";
+<a href=\"404.html\">Academic Advising Email</a><br\>\
+<a href=\"404.html\">Academic Advising Finances</a><br\>\
+<a href=\"404.html\">Academic Advising Mentorship</a><br\>\
+<a href=\"404.html\">Academic Advising Classes</a>";	
 
 var getTextAcademicContact = "<h5>Contact us</h5>\
 <p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
@@ -111,3 +111,25 @@ var getTextPostgradContact = "<h5>Contact us</h5>\
 <p>If you have any questions about housing please reach out to: campuslife@example.com</p>\
 <p>all other requests can be asked at: help@example.com</p>";
 
+/*Undergrad Text */
+var getTextUndergradAbout = "<h5>About us</h5>\
+<p>Our Mission: To seek individuals who are willing to become informed citizens,\
+thoughtful stewards, critical thinkers, and responsible leaders.</p>\
+<p>If you would like to apply click <a href=\"404.html\">here</a></p>\
+";		
+
+var getTextUndergradService = "<h5>Services</h5>\
+<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
+<p>If you have any questions about classes please reach out to: registration@example.com</p>\
+<p>Any other undergraduate inquires please reach out to: underGradHelp@example.com</p>";
+
+var getTextUndergradPortal = "<h5>Student Portal</h5>\
+<a href=\"404.html\">Undergraduate Email</a><br\>\
+<a href=\"404.html\">Undergraduate Finances</a><br\>\
+<a href=\"404.html\">Undergraduate Mentorship</a><br\>\
+<a href=\"404.html\">Undergraduate Classes</a>";
+
+var getTextUndergradContact = "<h5>Contact us</h5>\
+<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
+<p>If you have any questions about housing please reach out to: campuslife@example.com</p>\
+<p>all other requests can be asked at: help@example.com</p>";	

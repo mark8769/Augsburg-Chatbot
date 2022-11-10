@@ -56,6 +56,7 @@ function loadDialogOptions() {
             <p></p>\
             <a onclick=\"return theFunctionPost();\">More Info Post Graduates</a>\
             <p></p>\
+            <a onclick=\"return theFunctionUnder();\">More Info Under Graduates</a>\
 					  ";
 					  
 	elem.style = "padding: 10px;";
@@ -122,7 +123,7 @@ function AcademicContactInfo(){
 //Solution 1: Have a script in every page
 //Solution 2: Find another method
 function theFunctionPost(){
-  console.log("Post GradHas Been Clicked");
+  console.log("Post Grad Has Been Clicked");
   var elem = document.getElementById("chatbotSelectionItems");
   elem.innerHTML = generalOutlinePost;
 }
@@ -154,3 +155,35 @@ function PostContactInfo(){
   elem.innerHTML = getTextPostgradContact;
 }
 /* Below is Undergrad Info*/
+function theFunctionUnder(){
+  console.log("Under Grad Has Been Clicked");
+  var elem = document.getElementById("chatbotSelectionItems");
+  elem.innerHTML = generalOutlineUnder;
+}
+
+var generalOutlineUnder = "<h5>Here is some info for Under graduates, click one to see if it helps</h5>\
+<p onclick=\"return aboutInfoUnder();\">About</p>\
+<p onclick=\"return aboutInfoServiceUnder();\">StudentService</p>\
+<p onclick=\"return UnderPortalInfo();\">StudentPortal</p>\
+<a onclick=\"return UnderContactInfo();\">Contact Info</a>\
+";
+
+function aboutInfoUnder(){
+  var elem = document.getElementById("chatbotSelectionItems");
+  elem.innerHTML = getTextUndergradAbout;
+}
+
+function aboutInfoServiceUnder(){
+  var elem = document.getElementById("chatbotSelectionItems");
+  elem.innerHTML = getTextUndergradService;
+}
+
+function UnderPortalInfo(){
+  var elem = document.getElementById("chatbotSelectionItems");
+  elem.innerHTML = getTextUndergradPortal;
+}
+
+function UnderContactInfo(){
+  var elem = document.getElementById("chatbotSelectionItems");
+  elem.innerHTML = getTextUndergradContact;
+}
