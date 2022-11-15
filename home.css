@@ -8,16 +8,29 @@ html{
 }
 body{
     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#aug_logo{
+    /* height: 10%; */
 }
 #top-nav{
-    height: 8%;
+    /* height: 7%; */
     background-color: #111;
     /* Augsburg Color */
     /* background-color: #74253e; */
 }
 /* Aug logo height attribute for img element is 12% */
+.header_container{
+    /* flex-grow: 20%; */
+    height: 20%;
+}
 #main_content{
-    height: 80%;
+    /* height: 80%; */
+    /* This one doesnt work ?? */
+    /* flex-grow: 100%; */
+    height: 100%;
+    /* border: 5px solid red; */
 }
 .flex_container{
     display: flex;
