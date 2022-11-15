@@ -1,0 +1,30 @@
+/* https://github.com/botfront/rasa-webchat/issues/151 */
+/* https://github.com/botfront/rasa-webchat */
+
+/* div that close button is in */
+.rw-widget-container{
+    /* background-color: #74253e !important; */
+}
+/* Doesnt do anythin to color */
+.rw-close-button{
+    /* background-color: #74253e !important; */
+    /* color: #74253e !important; */
+}
+
+
+/* https://www.w3schools.com/css/css_important.asp */
+
+/* !important keyword overrides previous styling, giving these more importance
+Use chrome or firefox devtools to find class to override in chatbot */
+.rw-launcher, .rw-header{
+    background-color: #74253e !important;
+}
+.rw-client{
+    background-color: #74253e !important;
+}
+.rw-conversation-container .rw-send .rw-send-icon-ready{
+    fill: #74253e !important;
+}
+/* .rw-conversation-container .rw-send .rw-send-icon{
+    fill: #74253e !important;
+} */
