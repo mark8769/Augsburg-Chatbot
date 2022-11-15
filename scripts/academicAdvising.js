@@ -57,7 +57,7 @@ function getServicesSection() {
 /* Contact section html generation */
 function getContactSection() {
 	var element = document.getElementById("sideContent");
-	element.innerHTML= "<h5>Contact us</h5>\
+	element.innerHTML= "<h4>Contact us</h4>\
 						<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
 						<h6>Instagram</h6>\
           				<p>Follow <a href=\"https://www.instagram.com/advisingataugsburg/\">AdvisingatAugsburg</a></p>\
