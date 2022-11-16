@@ -26,37 +26,110 @@ function closeNav() {
 /* About section html generation */
 function getAboutSection() {
 	var element = document.getElementById("sideContent");
-	element.innerHTML= "<h5>About us</h5>\
-						<p>Our Mission: To seek individuals who are willing to become informed citizens,\
-						thoughtful stewards, critical thinkers, and responsible leaders.</p>\
-						<p>If you would like to apply click <a href=\"404.html\">here</a></p>\
-						";		
+	element.innerHTML= getTextPostgradAbout;
 }
 
 /* Services section html generation */
 function getServicesSection() {
 	var element = document.getElementById("sideContent");
-	element.innerHTML= "<h5>Services</h5>\
-						<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
-						<p>If you have any questions about classes please reach out to: registration@example.com</p>\
-						<p>Any other post-graduate inquires please reach out to postGradHelp@example.com</p>";	
+	element.innerHTML= getTextPostgradService;
 }
 
 /* Contact section html generation */
 function getContactSection() {
 	var element = document.getElementById("sideContent");
-	element.innerHTML= "<h5>Contact us</h5>\
-						<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
-						<p>If you have any questions about housing please reach out to: campuslife@example.com</p>\
-						<p>all other requests can be asked at: help@example.com</p>";	
+	element.innerHTML= getTextPostgradContact;
 }
 
 /* Student Portal Section html generation */
 function getStudentPortalSection() {
 	var element = document.getElementById("sideContent");
-	element.innerHTML= "<h5>Student Portal</h5>\
-						<a href=\"404.html\">Postgraduate Email</a><br\>\
-						<a href=\"404.html\">Postgraduate Finances</a><br\>\
-						<a href=\"404.html\">Postgraduate Mentorship</a><br\>\
-						<a href=\"404.html\">Postgraduate Classes</a>";	
+	element.innerHTML= getTextPostgradPortal;
 }
+
+/* Below is text for chatbot*/
+/* Academic Text */
+var getTextAcademicAbout = "<h5>About us</h5>\
+<p>Purpose of academic advising: Academic Advising educates students, faculty, and staff\
+on the Augsburg curriculum; interprets academic policies and procedures;\
+and supports students in achieving their educational and vocational goals.</p>\
+<h5>How academic advising works</h5>\
+<p>The advisors in Academic Advising are professionals trained to work with students who are new to the university and current \
+students who have questions about the general education requirements and interpretation of the academic procedures and policies of \
+the university. Academic Advising also provides comprehensive academic support for all Augsburg students.\
+Faculty mentors are full time members of specific academic departments who have been at the university at least a full year and have \
+been trained by Academic Advising on advising Augsburg students. Faculty mentors usually work with somewhere between 20–25 advisees \
+majoring in the department. They specialize in advising in their field (English, Biology, Social Work, etc.) but are also trained to\
+advise students on General Education issues.</p>\
+<p>If you would like to apply click <a href=\"404.html\">here</a></p>\
+";		
+
+var getTextAcademicService = "<h5>Services</h5>\
+<p>If you have any questions or inquires about academic advising please reach out to: registration@example.com</p>\
+<h5>Useful Tools</h5>\
+<p>This is a document of academic advisong drop in hours: \
+<a href=\"https://docs.google.com/document/d/1nuyy7NRk2tSEQDSzOWVb1jOfKLdeVXEDWORwI7srjr8/edit#\">Drop in hours</a></p>\
+<p>Where to schedule an appointment: <a href=\"https://augsburg.navigate.eab.com/\">Schedule appointment</a></p>\
+<p>Any other academic advising inquires please reach out to AcademicHelp@example.com</p>";	
+
+var getTextAcademicPortal = "<h5>Student Portal</h5>\
+<a href=\"404.html\">Academic Advising Email</a><br\>\
+<a href=\"404.html\">Academic Advising Finances</a><br\>\
+<a href=\"404.html\">Academic Advising Mentorship</a><br\>\
+<a href=\"404.html\">Academic Advising Classes</a>";
+
+var getTextAcademicContact = "<h5>Contact us</h5>\
+<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
+<h6>Instagram</h6>\
+<p>Follow <a href=\"https://www.instagram.com/advisingataugsburg/\">AdvisingatAugsburg</a></p>\
+<h6>Location</h6>\
+<p>Lindell Library, Second Floor (Link Level) 2211 Riverside Avenue South Campus Box 137 Minneapolis, MN 55454</p>\
+<h6>Email: <a href=\"advising@augsburg.edu\">advising@augsburg.edu</a></h6>\
+<h6>Telephone: <p>612-330-1025</p></h6>\
+<p>all other requests can be asked at: help@example.com</p>";	
+
+/* Post Grad Text */
+var getTextPostgradAbout = "<h5>About us</h5>\
+<p>Our Mission: To seek individuals who are willing to become informed citizens,\
+thoughtful stewards, critical thinkers, and responsible leaders.</p>\
+<p>If you would like to apply click <a href=\"404.html\">here</a></p>\
+";
+
+var getTextPostgradService = "<h5>Services</h5>\
+<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
+<p>If you have any questions about classes please reach out to: registration@example.com</p>\
+<p>Any other post-graduate inquires please reach out to postGradHelp@example.com</p>";
+
+var getTextPostgradPortal = "<h5>Student Portal</h5>\
+<a href=\"404.html\">Postgraduate Email</a><br\>\
+<a href=\"404.html\">Postgraduate Finances</a><br\>\
+<a href=\"404.html\">Postgraduate Mentorship</a><br\>\
+<a href=\"404.html\">Postgraduate Classes</a>";
+
+var getTextPostgradContact = "<h5>Contact us</h5>\
+<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
+<p>If you have any questions about housing please reach out to: campuslife@example.com</p>\
+<p>all other requests can be asked at: help@example.com</p>";
+
+/*Undergrad Text */
+var getTextUndergradAbout = "<h5>About us</h5>\
+<p>Our Mission: To seek individuals who are willing to become informed citizens,\
+thoughtful stewards, critical thinkers, and responsible leaders.</p>\
+<p>If you would like to apply click <a href=\"404.html\">here</a></p>\
+";		
+
+var getTextUndergradService = "<h5>Services</h5>\
+<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
+<p>If you have any questions about classes please reach out to: registration@example.com</p>\
+<p>Any other undergraduate inquires please reach out to: underGradHelp@example.com</p>";
+
+var getTextUndergradPortal = "<h5>Student Portal</h5>\
+<a href=\"404.html\">Undergraduate Email</a><br\>\
+<a href=\"404.html\">Undergraduate Finances</a><br\>\
+<a href=\"404.html\">Undergraduate Mentorship</a><br\>\
+<a href=\"404.html\">Undergraduate Classes</a>";
+
+var getTextUndergradContact = "<h5>Contact us</h5>\
+<p>If you have any questions or inquires about classes please reach out to: registration@example.com</p>\
+<p>If you have any questions about housing please reach out to: campuslife@example.com</p>\
+<p>all other requests can be asked at: help@example.com</p>";	
