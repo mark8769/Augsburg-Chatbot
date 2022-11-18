@@ -60,7 +60,7 @@ body{
         height: 150%;
     } */
 }
-@media(max-height: 800px) and (max-width: 425){
+@media(max-height: 800px){
     html{
         height: 210%;
     }
