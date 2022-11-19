@@ -1,34 +1,37 @@
 var id = null;
 function chatbotMoveUp() {
   var elem = document.getElementById("chatbotAnimationElement"); 
-  var pos = 0;
+  /* Starting positino in css, can start lower like before */
+  var pos = 10;
   clearInterval(id);
-  id = setInterval(frame, 10);
+  /* How fast it increments to desired position in if */
+  id = setInterval(frame, .0001);
   function frame() {
-    if (pos == 100) {
+    if (pos == 30) {
       clearInterval(id);
     } else {
       pos++; 
-      elem.style.bottom = pos + 'px';
+      elem.style.bottom = pos + '%';
     }
   }
   
-  changeChatbotImage("chatbot/images/chatbot_greeting.jpg", 259, 194, "Down");
+  changeChatbotImage("chatbot/images/chatbot_greeting_nobg.png", 259, 194, "Down");
   loadDialogOptions();
 }
 
 function chatbotMoveDown() {
   var elem = document.getElementById("chatbotAnimationElement");
-  var pos = 100;
+  var pos = 30;
   console.log(pos);
   clearInterval(id);
-  id = setInterval(frame, 10);
+  id = setInterval(frame, .0001);
   function frame() {
-    if (pos == 0) {
+    if (pos == 10) {
       clearInterval(id);
     } else {
       pos--; 
-      elem.style.bottom = pos + 'px';
+
+      elem.style.bottom = pos + '%';
     }
   }
   changeChatbotImage("chatbot/images/chatbot_head.jpg", 108, 124, "Up");
