@@ -27,7 +27,7 @@ body{
 
     /* Takes 100 % of remaining screen space */
     height: 100%;
-    border: 5px solid red;
+    /* border: 5px solid red; */
 }
 .sidebar{
     flex-grow: 10%;
