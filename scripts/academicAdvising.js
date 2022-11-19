@@ -26,29 +26,31 @@ function closeNav() {
 /* About section html generation */
 function getAboutSection() {
 	var element = document.getElementById("sideContent");
-	element.innerHTML= getTextAcademicAbout;
+	element.innerHTML = getTextAcademicAbout;
 }
 
 /* Services section html generation */
 function getServicesSection() {
 	var element = document.getElementById("sideContent");
-	element.innerHTML= getTextAcademicService;
+	element.innerHTML = getTextAcademicService;
 }
 
 /* Contact section html generation */
 function getContactSection() {
 	var element = document.getElementById("sideContent");
-	element.innerHTML= getTextAcademicContact;
+	element.innerHTML = getTextAcademicContact;
 }
 
 /* Student Portal Section html generation */
 function getStudentPortalSection() {
 	var element = document.getElementById("sideContent");
-	element.innerHTML= getTextAcademicPortal;
+	element.innerHTML = getTextAcademicPortal;
 }
 
 /* Below is text for chatbot*/
 /* Academic Text */
+var getAcademicAdvisingTitle = "<h3>Welcome to Academic Advising!</h3>\
+<br>";
 var getTextAcademicAbout = "<h5>About us</h5>\
 <p>Purpose of academic advising: Academic Advising educates students, faculty, and staff\
 on the Augsburg curriculum; interprets academic policies and procedures;\
