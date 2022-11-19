@@ -41,11 +41,19 @@ body{
     border: 5px solid red; */
     /* Set relative for image stuff below */
     position: relative;
-}
-#sideContent{
+    display: flex;
     /* Push content away from left and top border */
     padding-left: 30px;
     padding-top: 30px;
+}
+/* Inherits display flex properties */
+/* Inherits display flex properties for chatbot animation area */
+#sideContent{
+    /* Push content away from header */
+    /* padding-top: 30px; */
+    position: relative;
+    /* Fill the whole sideContainer to push animation to bottom corner */
+    flex-grow: 1;
 }
 @media(max-height: 1000px){
     html{
@@ -64,30 +72,10 @@ body{
     html{
         height: 210%;
     }
-}
-
-
-
-/* TODO: Image behind section text? (If no remove following css) */
-/* Should we put images behind section text? Can remove, not sure if I like the design
-after trying it out, text is hard to see even by changing on the background pic opacity  */
-/* https://www.digitalocean.com/community/tutorials/how-to-change-a-css-background-images-opacity */
-#sideContainer::before{
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.10;
-    /* background-image: url('images/hags_big.jpg');
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover; */
-}
-#sideContent {
-    position: relative;
-    /* font-weight: bolder;
-    font-size: 20px; */
+    .sidebar{
+        flex-grow: 5%;
+    }
+    #sideContainer{
+        flex-grow: 95%;
+    }
 }
