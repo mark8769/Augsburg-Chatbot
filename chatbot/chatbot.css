@@ -1,22 +1,54 @@
 #chatbotAnimationArea {
-  height: 400px;
-  position: relative;
+  /* height: 400px; */
+  width: 100%;
+  /* position: relative; */
+  /* position: fixed; */
+  /* bottom: 0px;
+  right: 0px; */
 }
 
 #chatbotAnimationElement {
   width: 50px;
   height: 50px;
   position: absolute;
-  right: 10%;
-  bottom: 0%;
+  right: 20%;
+  bottom: 10%;
 }
 
 #chatbotSelectionItems {
+  /* width: 30%;
+  height: 30%; */
 	/*width: 50px;*/
-	background-color: LightGray;
+  background-color: #F5F5F5;
 	/*height: 50px;*/
 	/*Padding: 25px;*/
 	position: absolute;
-	right: 15%;
-	bottom: 1%;
+	right: 27%;
+	bottom: 15%;
+  border-radius: 15px;
+  border: 1px solid #E6E6E6;
 }
+/* TODO: Add some media querys to this */
+/* @media (max-width: 600px){
+  #chatbotAnimationArea{
+    height: 200px;
+    width: 250px;
+  }
+  #chatbotAnimationElement{
+    width: 10px;
+    height: 10px;
+  }
+  #chatbotSelectionItems{
+    font-size: 10px;
+  }
+} */
+
+
+/* height: 100%;
+width: 100%;
+padding-right: 25%;
+padding-bottom: 20%;
+justify-content: end; */
+
+
+/* height: 100%;width: 100%; padding-right: 25%; padding-bottom: 20%;justify-content:end */
