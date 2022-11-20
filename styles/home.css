@@ -6,9 +6,6 @@ body{
     display: flex;
     flex-direction: column;
 }
-/* #aug_logo{
-    height: 10%;
-} */
 #top-nav{
     background-color: #111;
     /* Let content overflow, prevents scrollbar inside navbar */
@@ -21,10 +18,6 @@ body{
     flex-direction: row;
 }
 #main_container{
-    /* height: 80%; */
-    /* This one doesnt work ?? */
-    /* flex-grow: 100%; */
-
     /* Takes 100 % of remaining screen space */
     height: 100%;
     /* border: 5px solid red; */
@@ -37,8 +30,6 @@ body{
 #sideContainer{
     width: 90%;
     height: 100%;
-    /* padding: 10px;
-    border: 5px solid red; */
     /* Set relative for image stuff below */
     position: relative;
     display: flex;
@@ -50,7 +41,6 @@ body{
 /* Inherits display flex properties for chatbot animation area */
 #sideContent{
     /* Push content away from header */
-    /* padding-top: 30px; */
     position: relative;
     /* Fill the whole sideContainer to push animation to bottom corner */
     flex-grow: 1;
@@ -64,9 +54,6 @@ body{
             height: 170%;
         }
     }
-    /* body{
-        height: 150%;
-    } */
 }
 @media(max-height: 800px){
     html{
