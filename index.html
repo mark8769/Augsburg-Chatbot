@@ -37,14 +37,17 @@
             </nav>
 
 
-        <div id="main_container" class="flex_container" data-bs-spy="scroll" data-bs-target="#side_section_links" data-bs-offset="0" >
+        <div id="main_container" class="flex_container">
           <!-- End of navigation bar -->
           <!-- Code for Side navigation bar -->
+
+          <div id="home_logo"></div>
+
           <script src="scripts/academicAdvising.js"></script>
 
           <!-- Github for chatbot frontend https://github.com/botfront/rasa-webchat-->
           <!-- Put inner HTML from javascript files inside div, wont affect rasa chatbot (I checked, must be a fixed position being set on it?)-->
-              
+          <div id="chatbot_footer"></div><!-- Chatbot footer -->
             <script>!(function () {
               let e = document.createElement("script"),
                 t = document.head || document.getElementsByTagName("head")[0];
@@ -69,7 +72,6 @@
                 t.insertBefore(e, t.firstChild);
             })();
             </script>
-
         </div><!-- End of container -->
 
         <!-- Bootstrap javascript files -->
