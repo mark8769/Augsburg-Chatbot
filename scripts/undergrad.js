@@ -27,24 +27,42 @@ function closeNav() {
 function getAboutSection() {
 	var element = document.getElementById("sideContent");
 	element.innerHTML= getTextUndergradAbout;	
+	setActiveNavItem("about");
 }
 
 /* Services section html generation */
 function getServicesSection() {
 	var element = document.getElementById("sideContent");
 	element.innerHTML= getTextUndergradService;
+	setActiveNavItem("services");
 }
 /* Contact section html generation */
 function getContactSection() {
 	var element = document.getElementById("sideContent");
 	element.innerHTML= getTextUndergradContact;
+	setActiveNavItem("contact");
 }
 
 /* Student Portal Section html generation */
 function getStudentPortalSection() {
 	var element = document.getElementById("sideContent");
-	element.innerHTML= getTextUndergradPortal
+	element.innerHTML= getTextUndergradPortal;
+	setActiveNavItem("student_portal");
 }
+
+/* setting active item in the side nav bar */
+function setActiveNavItem(item) {
+	for(const list_item of sectionItems) {
+		if (item == list_item) {
+			document.getElementById(item).style.backgroundColor = "#74253e";
+		}
+		else {
+			document.getElementById(list_item).style.backgroundColor = "#111";
+		}
+	}
+}
+
+var sectionItems = ["about", "services", "student_portal", "contact"];
 
 /* Below is text for chatbot*/
 /* Academic Text */
