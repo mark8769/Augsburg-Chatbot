@@ -27,15 +27,22 @@ pip3 install -U pip
 Install requirements file (contains all dependencies) from root of project
 
 ```
-pip3 install documentation\requirements.txt
+pip3 install -r documentation\requirements.txt
 ```
 
-You might have to update your pyenv file if rasa is incompatible with current python version you are using.
-Head to venv\pyenv and update file to use different python version. Location of file on macbook
+You might have to update your pyenv file if rasa is incompatible with current python version your computer is using.
+You will probably get this error even after installing the python version above, because python path will most likely point
+to some previous installation.
+
+Head to venv\pyenv.cfg folder in project root (created after making virtual environment, not being pushed to repo) 
+and update file to use different python version. Location of file on macbook
 might look something like usr/local/bin/python.version or usr/bin/python.version. You will need to have python.version installed
 on your computer for pyenv to be able to find it. Download is above.
 
+Close virtual environment, and activate it again with .\venv\Scripts\activate
+
 ```
+// This is an example of what pyenv.cfg will look like on windows using python version from above
 home = C:\Users\Administrator\AppData\Local\Programs\Python\Python37
 include-system-site-packages = false
 version = 3.7.8
