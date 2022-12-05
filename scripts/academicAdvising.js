@@ -27,26 +27,50 @@ function closeNav() {
 function getAboutSection() {
 	var element = document.getElementById("sideContent");
 	element.innerHTML = getTextAcademicAbout;
+	setSideBarColorSections();
+	const colorElementA = document.querySelector('.aboutSec');
+	colorElementA.style.backgroundColor = '#74253e';
 }
 
 /* Services section html generation */
 function getServicesSection() {
 	var element = document.getElementById("sideContent");
 	element.innerHTML = getTextAcademicService;
+	setSideBarColorSections();
+	const colorElementS = document.querySelector('.servicesSec');
+	colorElementS.style.backgroundColor = '#74253e';
 }
 
 /* Contact section html generation */
 function getContactSection() {
 	var element = document.getElementById("sideContent");
 	element.innerHTML = getTextAcademicContact;
+	setSideBarColorSections();
+	const colorElementC = document.querySelector('.contactSec');
+	colorElementC.style.backgroundColor = '#74253e';
 }
 
 /* Student Portal Section html generation */
 function getStudentPortalSection() {
 	var element = document.getElementById("sideContent");
 	element.innerHTML = getTextAcademicPortal;
+	setSideBarColorSections();
+	const colorElementP = document.querySelector('.portalSec');
+	colorElementP.style.backgroundColor = '#74253e';
 }
 
+/* If we are changing the navbar color then shange the background color to its default color*/
+function setSideBarColorSections(){
+	const elementAbout = document.querySelector('.aboutSec');
+	elementAbout.style.backgroundColor = '#111';
+	const elementServices = document.querySelector('.servicesSec');
+	elementServices.style.backgroundColor = '#111';
+	const elementPortal = document.querySelector('.portalSec');
+	elementPortal.style.backgroundColor = '#111';
+	const elementContact = document.querySelector('.contactSec');
+	elementContact.style.backgroundColor = '#111';
+}
+	
 /* Below is text for chatbot*/
 /* Academic Text */
 var getAcademicAdvisingTitle = "<h3>Welcome to Academic Advising!</h3>\
