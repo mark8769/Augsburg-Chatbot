@@ -2,3 +2,15 @@
 #sideContainer{
     flex-direction: column;
 }
+
+#sideContainer {
+    content:"";
+    background-image: url("../images/hags_big.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.navBarItem {
+    background-color: white;
+    padding: 5px;
+}

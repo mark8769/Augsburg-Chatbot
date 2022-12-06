@@ -20,7 +20,7 @@
       <div id="aug_logo"><img src="images/augsburg_university_logo_big.jpg" alt="Augsburg University Logo" width="261.79px" height="100px"></div>
       <!-- https://getbootstrap.com/docs/5.0/components/navbar/ -->
       <!-- Start of navigation bar -->
-      <nav id="top-nav" class="navbar navbar-expand-lg navbar-dark">
+      <nav id="top-nav" class="navbar navbar-expand-lg navbar-dark" style="background-color: #74253e;">
           <a class="navbar-brand" href="#">Augsburg AI Chatbot</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_sandwich" aria-controls="navbar_sandwich" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -44,14 +44,14 @@
 		  <script src="scripts/undergrad.js"></script>
       
       <div id= "side_section_links" class="sidebar">
-        <a id="about" href="javascript:void(0)" onclick="getAboutSection()">About</a>
-        <a id="services" href="javascript:void(0)" onclick="getServicesSection()">Services</a>
-        <a id="student_portal" href="javascript:void(0)" onclick="getStudentPortalSection()">Student Portal</a>
-        <a id="contact" href="javascript:void(0)" onclick="getContactSection()">Contact</a>
+        <a class="aboutSec" id="about" href="javascript:void(0)" onclick="getAboutSection()">About</a>
+        <a class="servicesSec" id="services" href="javascript:void(0)" onclick="getServicesSection()">Services</a>
+        <a class="portalSec" id="student_portal" href="javascript:void(0)" onclick="getStudentPortalSection()">Student Portal</a>
+        <a class="contactSec" id="contact" href="javascript:void(0)" onclick="getContactSection()">Contact</a>
       </div>
 
       <div id="sideContainer" class="flex_container">
-        <div>
+        <div id="opacity_item">
           <h3>Welcome to the Undergraduate Page!</h3>
           <br>
         </div>
