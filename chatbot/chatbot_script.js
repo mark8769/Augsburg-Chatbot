@@ -82,8 +82,6 @@ function changeChatbotImage(filepath, height, width, option) {
 	var elem = document.getElementById("chatbotAnimationElement");
 	elem.innerHTML= "<img src=\"" + filepath + "\" height=\"" + height + "px\" \
 	width=\"" + width + "px\" onclick=\"chatbotMove" + option + "()\"></img>";
-	//console.log(elem.innerHTML);
-	//console.log("Chatbot Image has been updated"); // TODO: Remove
 }
 
 /* Below is Adacemic Advising info */

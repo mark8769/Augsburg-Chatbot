@@ -1,28 +1,3 @@
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-function openNav() {
-	var navBarElement = document.getElementById("sideNavBar");
-	navBarElement.style.width = "100px";
-	navBarElement.style.height = "150px";
-	navBarElement.style.backgroundColor = "rgba(0,0,0,0.4)";
-	document.getElementById("sideNavMain").style.marginLeft = "5px";
-	navBarElement.innerHTML = "<a href=\"javascript:void(0)\" class=\"closebtn\" onclick=\"closeNav()\" style=\"text-align:right;\">x</a><br/>\
-							   <a href=\"javascript:void(0)\" onclick=\"getAboutSection()\">About</a> <br/>\
-							   <a href=\"javascript:void(0)\" onclick=\"getServicesSection()\">Services</a> <br/>\
-							   <a href=\"javascript:void(0)\" onclick=\"getStudentPortalSection()\">Student Portal</a> <br/>\
-							   <a href=\"javascript:void(0)\" onclick=\"getContactSection()\">Contact</a> <br/>";
-}
-
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-function closeNav() {
-	var navBarElement = document.getElementById("sideNavBar");
-	navBarElement.style.width = "0";
-	navBarElement.style.height = "0";
-	navBarElement.style.backgroundColor = "white";
-	document.getElementById("sideNavMain").style.marginLeft = "0";
-	navBarElement.innerHTML = "";
-	document.getElementById("sideContent").innerHTML = "";
-}
-
 /* About section html generation */
 function getAboutSection() {
 	var element = document.getElementById("sideContent");
