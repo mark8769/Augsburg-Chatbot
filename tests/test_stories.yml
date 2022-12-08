@@ -31,11 +31,11 @@ stories:
   - action: utter_goodbye
   
 - story: happy path 3
-    steps:
+  steps:
     - user: |
         hello there!
     intent: greet
-    - action: utter_grreet
+    - action: utter_greet
     - user: |
         amazing
     intent: mood_great
@@ -48,7 +48,7 @@ stories:
     - user: |
         hello there!
     intent: greet
-    - action: utter_grreet
+    - action: utter_greet
     - user: |
         amazing
     intent: mood_great
@@ -63,7 +63,7 @@ stories:
     - user: |
         hello there!
     intent: greet
-    - action: utter_grreet
+    - action: utter_greet
     - user: |
         amazing
     intent: mood_great
@@ -174,7 +174,7 @@ stories:
     - action: utter_agree
     - action: utter_faq
     
-- story: sad path 4
+- story: sad path 5
     steps:
     - user: |
         hi
@@ -206,3 +206,4 @@ stories:
     intent: bot_challenge
   - action: utter_iamabot
 ###------------------------------- End Bot Challenges ---------------------------------###
+

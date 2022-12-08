@@ -19,6 +19,11 @@ intents:
   - chitchat/ask_name
   - chitchat/ask_weather
   - chitchat/ask_hobbies
+  - postGrad_location
+  - underGrad_location
+  - academicAdvising_location
+  - homePage_location
+
 ### ---------------------------- Custom intents end here ---------------------------------###
 
 responses:
@@ -54,10 +59,38 @@ responses:
   utter_thatIsGood:
   - text: "That's good!"
 
-  utter_chitchat/ask_hobbies:
-  - text: "What do you like to do for fun?"
+  utter_mood_neutral:
+  - text: "That is fine"
 
+  utter_chitchat/ask_name:
+  - text: "What is your name?"
+
+  utter_chitchat/ask_weather:
+  - text: "The weather is fine today {Maybe make some function call in actions.py}"
+
+  utter_chichat/ask_hobbies:
+  - text: "What do you like doing in your free time?"
+
+  utter_postGrad_location:
+  - text: "Here is a link to postgrad resouces, hope this helped! [Post-grad Resources](post-grad.html)"
+  
+  utter_underGrad_location:
+  - text: "Here is a link to undergrad resources, hope this helped! [Under-grad Resources](under-grad.html)"
+  
+  utter_academicAdvising_location:
+  - text: "Here is a link to academic advising, hope this helped! [Academic Advising](academic_advising.html)"
+  
+  utter_homePage_location:
+  - text: "You're on this page silly :)"
 ###--------------------------------- End Response Section -----------------------------###
+
+actions:
+- utter_academicAdvising_location
+- utter_chitchat
+- utter_faq_ready
+- utter_greet
+- utter_thatIsGood
+- action_tell_weather
 
 session_config:
   session_expiration_time: 60
